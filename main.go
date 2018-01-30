@@ -73,6 +73,7 @@ func main() {
 	c := resty.New().SetAuthToken(tokens.AccessToken).SetHeaders(map[string]string{
 		"Accept":       "application/vnd.api+json",
 		"Content-Type": "application/vnd.api+json",
+		"User-Agent":   "Anime Planet Sync/1.0.0 (github.com/kitsu-space/anime-planet-sync",
 	})
 
 	u := getUserID(c)
